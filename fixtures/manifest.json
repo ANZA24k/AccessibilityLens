@@ -1,0 +1,30 @@
+{
+  "manifest": [
+    {
+      "requirement": "focus",
+      "page": "/checkout",
+      "method": "KEYBOARD",
+      "url": "https://raw.githubusercontent.com/ANZA24k/AccessibilityLens/87eded275881ab691c59f4f9e5b27456c27bed83/fixtures/pass_0.json",
+      "sha256": "069dbbe4f64e63571962f409e36f4f5edde3923b4b1aa52e011826888f32c5c9",
+      "bytes": 566
+    },
+    {
+      "requirement": "name",
+      "page": "/checkout",
+      "method": "SCREEN_READER",
+      "url": "https://raw.githubusercontent.com/ANZA24k/AccessibilityLens/87eded275881ab691c59f4f9e5b27456c27bed83/fixtures/pass_1.json",
+      "sha256": "26d0f88a06bb4197010662548620b0c2006e7e3760048e538a2d6d676f98e6dd",
+      "bytes": 477
+    },
+    {
+      "requirement": "name",
+      "page": "/checkout",
+      "method": "MANUAL",
+      "url": "https://raw.githubusercontent.com/ANZA24k/AccessibilityLens/87eded275881ab691c59f4f9e5b27456c27bed83/fixtures/pass_2.json",
+      "sha256": "ffa6ece45a46a9e142fba9826c21f48bbb09820f2c1111ac99fca711ee07b1fe",
+      "bytes": 526
+    }
+  ],
+  "evidence_json": "[{\"bytes\":566,\"method\":\"KEYBOARD\",\"page\":\"/checkout\",\"requirement\":\"focus\",\"sha256\":\"069dbbe4f64e63571962f409e36f4f5edde3923b4b1aa52e011826888f32c5c9\",\"url\":\"https://raw.githubusercontent.com/ANZA24k/AccessibilityLens/87eded275881ab691c59f4f9e5b27456c27bed83/fixtures/pass_0.json\"},{\"bytes\":477,\"method\":\"SCREEN_READER\",\"page\":\"/checkout\",\"requirement\":\"name\",\"sha256\":\"26d0f88a06bb4197010662548620b0c2006e7e3760048e538a2d6d676f98e6dd\",\"url\":\"https://raw.githubusercontent.com/ANZA24k/AccessibilityLens/87eded275881ab691c59f4f9e5b27456c27bed83/fixtures/pass_1.json\"},{\"bytes\":526,\"method\":\"MANUAL\",\"page\":\"/checkout\",\"requirement\":\"name\",\"sha256\":\"ffa6ece45a46a9e142fba9826c21f48bbb09820f2c1111ac99fca711ee07b1fe\",\"url\":\"https://raw.githubusercontent.com/ANZA24k/AccessibilityLens/87eded275881ab691c59f4f9e5b27456c27bed83/fixtures/pass_2.json\"}]",
+  "evidence_hash": "d4ad1b22c979ede450d399302eb837224839f0753562b118e61c974811bc7e12"
+}

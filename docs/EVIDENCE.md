@@ -30,6 +30,8 @@ Each retrieved JSON record must have exactly these keys:
 
 `reported` is PASS, FAIL or UNKNOWN. The model checks whether the procedure is appropriate for the criterion and method and whether observations support the report. A supported PASS/FAIL needs exact substrings from both procedure and observed fields. A model cannot promote a reported failure or uncertainty to PASS. UNKNOWN has no quotations. No source, malformed source, hash mismatch, unrelated target/build/cell and retrieval failure all contribute UNKNOWN rather than successful coverage.
 
+Model JSON responses use an exact object envelope `{"checks": [...]}`, matching the pinned SDK JSON interface. The model cannot supply the final overall outcome; the contract derives it.
+
 The contract does not fetch arbitrary URLs or follow links embedded in records. Only HTTPS raw.githubusercontent.com URLs with full 40-character lowercase Git commits and restricted `.json` paths are accepted. Response status must be 200. The SDK HTTP stack may follow redirects internally; the contract has no redirect-control API. Exact byte/hash verification remains mandatory even after any transport redirect. Response sizes are checked after download; transport buffering/timeouts are controlled by GenVM, not the contract. Sources must therefore remain small and public.
 
 ## Canonical hashing

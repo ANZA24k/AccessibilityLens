@@ -31,7 +31,7 @@ def rows(docs):
 def mocks(vm,items,docs,response):
     vm.clear_mocks()
     for e,d in zip(items,docs): vm.mock_web(e['url'],dict(method='GET',status=200,body=canon(d)))
-    vm.mock_llm('.*',canon(response))
+    vm.mock_llm('.*',canon({'checks':response}))
 def submit(obj,pid,items,label='audit-1'):
     return obj.submit_audit(pid,label,canon(items),digest(items))
 
@@ -83,7 +83,7 @@ def test_bad_source_no_support(setup,change):
         vm.clear_mocks()
         for i,(e,d) in enumerate(zip(items,docs)):
             vm.mock_web(e['url'],dict(method='GET',status=404 if change=='http' and i==0 else 200,body='broken' if i==0 else canon(d)))
-        vm.mock_llm('.*',canon(result))
+        vm.mock_llm('.*',canon({'checks':result}))
     obj.evaluate(aid); assert json.loads(obj.get_receipt(aid,1))['body']['decision']['outcome']=='PARTIAL'
     assert vm.run_validator() is True
 
@@ -167,3 +167,15 @@ def test_unknown_views(setup):
     vm,obj,p,pid,docs=setup
     for action in [lambda:obj.get_policy('x'),lambda:obj.get_audit('x'),lambda:obj.get_receipt('x',1),lambda:obj.evaluate('x')]:
         with pytest.raises(Exception): action()
+
+@pytest.mark.parametrize('attack',['forged_quote','wrong_state','omitted_cell','extra_field','leader_error'])
+def test_validator_rejects_forged_proposal(setup,attack):
+    vm,obj,p,pid,docs=setup; items=manifest(docs); aid=submit(obj,pid,items)
+    mocks(vm,items,docs,rows(docs)); obj.evaluate(aid)
+    proposal={'assessment':rows(docs),'documents':{}}
+    if attack=='forged_quote': proposal['assessment'][0]['observed_quote']='An invented successful accessibility observation'
+    if attack=='wrong_state': proposal['assessment'][0]=unknown(docs[0])
+    if attack=='omitted_cell': proposal['assessment'].pop()
+    if attack=='extra_field': proposal['assessment'][0]['override']=True
+    if attack=='leader_error': assert vm.run_validator(leader_error=RuntimeError('unavailable')) is False
+    else: assert vm.run_validator(leader_result=proposal) is False

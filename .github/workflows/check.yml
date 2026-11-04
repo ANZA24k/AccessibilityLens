@@ -12,6 +12,7 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements-dev.txt
       - run: genvm-lint check contracts/accessibility_lens.py
+      - run: genvm-lint typecheck contracts/accessibility_lens.py
       - run: python -m pytest -q
       - run: genvm-lint schema contracts/accessibility_lens.py --output /tmp/abi.json
       - run: diff -u docs/abi.json /tmp/abi.json

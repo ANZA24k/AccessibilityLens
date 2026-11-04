@@ -2,7 +2,7 @@
 
 A standalone GenLayer Intelligent Contract for evidence-backed, build-specific digital accessibility assessments. It combines immutable test requirements, independently executed AI review, exact evidence quotations and deterministic coverage rules.
 
-**Status:** implementation and offline SDK tests complete. Deployment status and live receipts are recorded in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md). This is an assessment of submitted test evidence, not certification of a site's complete accessibility or legal compliance.
+**Status:** deployed successfully on Studionet (chain 61999). 53 SDK tests, GenVM lint, semantic validation and type checking pass. Live assessment results and receipts are recorded in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md). This is an assessment of submitted test evidence, not certification of a site's complete accessibility or legal compliance.
 
 ## What it does
 

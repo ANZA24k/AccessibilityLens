@@ -1,0 +1,142 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract": "0xF1167141b130dDd16DDF3A65974343f108fE7bec",
+  "leader_only": false,
+  "transactions": [
+    {
+      "method": "register_policy",
+      "hash": "0x0024b4f96ae643c52471cfbbb4be4814b76fccc10e45d4144a5ca4005ef6d78e",
+      "status": "FINALIZED",
+      "execution": "SUCCESS"
+    },
+    {
+      "method": "submit_audit",
+      "hash": "0xfc7f84450b50b7247581add54d947b36647f6e83a2bb3f91be3b731ad71e0d34",
+      "status": "FINALIZED",
+      "execution": "SUCCESS"
+    },
+    {
+      "method": "evaluate",
+      "hash": "0x78ac01746910f2c67a44f167369b2238153ec30d023d1ef4e2872be7bb9b67a9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS"
+    }
+  ],
+  "policy_id": "fc1114fcff80a9c449adbe67b996e666335b013d1c9a0a9e611e15666eb08536",
+  "policy": {
+    "auditor": "0x598cDBB76556dd06D0dFBE9Fb4Fe4d18A3805663",
+    "contract": "0xF1167141b130dDd16DDF3A65974343f108fE7bec",
+    "domain": "AccessibilityLens/1",
+    "owner": "0x598cDBB76556dd06D0dFBE9Fb4Fe4d18A3805663",
+    "policy": {
+      "name": "Synthetic checkout keyboard and screen reader review",
+      "pages": [
+        "/checkout"
+      ],
+      "requirements": [
+        {
+          "criterion": "All checkout controls can be reached and activated without a keyboard trap.",
+          "id": "focus",
+          "methods": [
+            "KEYBOARD"
+          ]
+        },
+        {
+          "criterion": "The email input has an accessible name that identifies its purpose.",
+          "id": "name",
+          "methods": [
+            "SCREEN_READER",
+            "MANUAL"
+          ]
+        }
+      ],
+      "target": "demo-checkout",
+      "version": "49445412e5fec84e40d3c422df8efd415c96266a6d9e5a0001064fae3ddbd14b"
+    }
+  },
+  "audit_id": "20934eac1c6d7ff5ffa2f97abb9429db267e62d7d8ae54cab8098e354bdb2986",
+  "audit": {
+    "attempts": 1,
+    "closed": false,
+    "head": "0a2442ae6446ea37a4f2e3f7fb1cdceb936ef415831c17e41edcf50fb88d55ee",
+    "package": {
+      "contract": "0xF1167141b130dDd16DDF3A65974343f108fE7bec",
+      "domain": "AccessibilityLens/1",
+      "evidence": [
+        {
+          "bytes": 566,
+          "method": "KEYBOARD",
+          "page": "/checkout",
+          "requirement": "focus",
+          "sha256": "069dbbe4f64e63571962f409e36f4f5edde3923b4b1aa52e011826888f32c5c9",
+          "url": "https://raw.githubusercontent.com/ANZA24k/AccessibilityLens/87eded275881ab691c59f4f9e5b27456c27bed83/fixtures/pass_0.json"
+        },
+        {
+          "bytes": 477,
+          "method": "SCREEN_READER",
+          "page": "/checkout",
+          "requirement": "name",
+          "sha256": "26d0f88a06bb4197010662548620b0c2006e7e3760048e538a2d6d676f98e6dd",
+          "url": "https://raw.githubusercontent.com/ANZA24k/AccessibilityLens/87eded275881ab691c59f4f9e5b27456c27bed83/fixtures/pass_1.json"
+        },
+        {
+          "bytes": 526,
+          "method": "MANUAL",
+          "page": "/checkout",
+          "requirement": "name",
+          "sha256": "ffa6ece45a46a9e142fba9826c21f48bbb09820f2c1111ac99fca711ee07b1fe",
+          "url": "https://raw.githubusercontent.com/ANZA24k/AccessibilityLens/87eded275881ab691c59f4f9e5b27456c27bed83/fixtures/pass_2.json"
+        }
+      ],
+      "evidence_hash": "d4ad1b22c979ede450d399302eb837224839f0753562b118e61c974811bc7e12",
+      "label": "synthetic-checkout-v1",
+      "policy_id": "fc1114fcff80a9c449adbe67b996e666335b013d1c9a0a9e611e15666eb08536"
+    }
+  },
+  "receipt": {
+    "body": {
+      "assessment": [
+        {
+          "method": "KEYBOARD",
+          "observed_quote": "",
+          "page": "/checkout",
+          "procedure_quote": "",
+          "requirement": "focus",
+          "state": "UNKNOWN"
+        },
+        {
+          "method": "SCREEN_READER",
+          "observed_quote": "",
+          "page": "/checkout",
+          "procedure_quote": "",
+          "requirement": "name",
+          "state": "UNKNOWN"
+        },
+        {
+          "method": "MANUAL",
+          "observed_quote": "",
+          "page": "/checkout",
+          "procedure_quote": "",
+          "requirement": "name",
+          "state": "UNKNOWN"
+        }
+      ],
+      "attempt": 1,
+      "audit_id": "20934eac1c6d7ff5ffa2f97abb9429db267e62d7d8ae54cab8098e354bdb2986",
+      "contract": "0xF1167141b130dDd16DDF3A65974343f108fE7bec",
+      "decision": {
+        "failed": 0,
+        "outcome": "INCONCLUSIVE",
+        "passed": 0,
+        "required": 3,
+        "unknown": 3
+      },
+      "domain": "AccessibilityLens/1",
+      "evidence_hash": "d4ad1b22c979ede450d399302eb837224839f0753562b118e61c974811bc7e12",
+      "policy_id": "fc1114fcff80a9c449adbe67b996e666335b013d1c9a0a9e611e15666eb08536",
+      "previous_hash": ""
+    },
+    "hash": "0a2442ae6446ea37a4f2e3f7fb1cdceb936ef415831c17e41edcf50fb88d55ee"
+  }
+}
