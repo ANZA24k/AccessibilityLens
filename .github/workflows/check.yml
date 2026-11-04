@@ -1,0 +1,23 @@
+name: Contract checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-dev.txt
+      - run: genvm-lint check contracts/accessibility_lens.py
+      - run: python -m pytest -q
+      - run: genvm-lint schema contracts/accessibility_lens.py --output /tmp/abi.json
+      - run: diff -u docs/abi.json /tmp/abi.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: node --check scripts/network.mjs

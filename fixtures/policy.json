@@ -1,0 +1,25 @@
+{
+  "name": "Synthetic checkout keyboard and screen reader review",
+  "target": "demo-checkout",
+  "version": "49445412e5fec84e40d3c422df8efd415c96266a6d9e5a0001064fae3ddbd14b",
+  "pages": [
+    "/checkout"
+  ],
+  "requirements": [
+    {
+      "id": "focus",
+      "criterion": "All checkout controls can be reached and activated without a keyboard trap.",
+      "methods": [
+        "KEYBOARD"
+      ]
+    },
+    {
+      "id": "name",
+      "criterion": "The email input has an accessible name that identifies its purpose.",
+      "methods": [
+        "SCREEN_READER",
+        "MANUAL"
+      ]
+    }
+  ]
+}
