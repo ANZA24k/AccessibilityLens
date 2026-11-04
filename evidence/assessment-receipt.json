@@ -1,0 +1,45 @@
+{
+  "body": {
+    "assessment": [
+      {
+        "method": "KEYBOARD",
+        "observed_quote": "Focus reached email, address, delivery options and Pay in order; every control activated and focus could leave every field.",
+        "page": "/checkout",
+        "procedure_quote": "pressed Tab through every checkout control, used Enter and Space to activate each, and Shift+Tab to leave the email field.",
+        "requirement": "focus",
+        "state": "PASS"
+      },
+      {
+        "method": "SCREEN_READER",
+        "observed_quote": "NVDA announced Email address, edit, required when the email input received focus.",
+        "page": "/checkout",
+        "procedure_quote": "Used NVDA form navigation to focus the email input and recorded its spoken accessible name and role.",
+        "requirement": "name",
+        "state": "PASS"
+      },
+      {
+        "method": "MANUAL",
+        "observed_quote": "The input has role textbox and accessible name Email address derived from a correctly associated visible label.",
+        "page": "/checkout",
+        "procedure_quote": "Inspected the email input accessibility tree and verified the label association using its id and the label for attribute.",
+        "requirement": "name",
+        "state": "PASS"
+      }
+    ],
+    "attempt": 1,
+    "audit_id": "69c4ea127d7d6f3a8b522b137bed11e1497dd179e6942be15b31d26206bb8eef",
+    "contract": "0xa23E85B5F3c0141748e8957Cd5FaA2A6d17FF573",
+    "decision": {
+      "failed": 0,
+      "outcome": "CONFORMANT",
+      "passed": 3,
+      "required": 3,
+      "unknown": 0
+    },
+    "domain": "AccessibilityLens/1.1",
+    "evidence_hash": "d4ad1b22c979ede450d399302eb837224839f0753562b118e61c974811bc7e12",
+    "policy_id": "6236c61c7b55754d09e06b9c15ffa5a898603ac50a92b938f3a89962e83477a8",
+    "previous_hash": ""
+  },
+  "hash": "fe31631fced01b62f5f368072cf4c42e7291546bbef7a78b5458dc4c0e122fcb"
+}

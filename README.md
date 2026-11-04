@@ -2,7 +2,9 @@
 
 A standalone GenLayer Intelligent Contract for evidence-backed, build-specific digital accessibility assessments. It combines immutable test requirements, independently executed AI review, exact evidence quotations and deterministic coverage rules.
 
-**Status:** deployed successfully on Studionet (chain 61999). 53 SDK tests, GenVM lint, semantic validation and type checking pass. Live assessment results and receipts are recorded in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md). This is an assessment of submitted test evidence, not certification of a site's complete accessibility or legal compliance.
+**Status:** deployed on Studionet (chain 61999); the complete synthetic checkout flow finalized successfully with CONFORMANT (3/3 PASS). 53 SDK tests, GenVM lint, semantic validation and type checking pass. Live assessment results and receipts are recorded in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md). This is an assessment of submitted test evidence, not certification of a site's complete accessibility or legal compliance.
+
+[Live contract on Studionet](https://explorer-studio.genlayer.com/contracts/0xa23E85B5F3c0141748e8957Cd5FaA2A6d17FF573) · `0xa23E85B5F3c0141748e8957Cd5FaA2A6d17FF573`
 
 ## What it does
 

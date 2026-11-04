@@ -9,7 +9,7 @@ root=Path(__file__).resolve().parents[1]
 address=sys.argv[1]
 request=urllib.request.Request('https://studio.genlayer.com/api',data=json.dumps({
     'jsonrpc':'2.0','method':'gen_getContractCode','params':[address],'id':1}).encode(),
-    headers={'Content-Type':'application/json'})
+    headers={'Content-Type':'application/json','User-Agent':'python-requests/2.32.3'})
 with urllib.request.urlopen(request,timeout=30) as response: result=json.load(response)
 if 'error' in result: raise SystemExit(result['error'])
 deployed=base64.b64decode(result['result'],validate=True)

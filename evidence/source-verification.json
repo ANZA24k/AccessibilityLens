@@ -1,8 +1,8 @@
 {
-  "contract": "0xF1167141b130dDd16DDF3A65974343f108fE7bec",
   "network": "studionet",
-  "source_commit": "87eded275881ab691c59f4f9e5b27456c27bed83",
-  "local_sha256": "f41c2c0d6f3f572b84d2679ce9bfe54836525c8445f6789db493640a3c866ebf",
-  "deployed_sha256": "f41c2c0d6f3f572b84d2679ce9bfe54836525c8445f6789db493640a3c866ebf",
+  "chain_id": 61999,
+  "contract": "0xa23E85B5F3c0141748e8957Cd5FaA2A6d17FF573",
+  "local_sha256": "8623d7800307e8f8714b2e97747e7ebd71b1d55f87f6e6098db36df7906e2efb",
+  "deployed_sha256": "8623d7800307e8f8714b2e97747e7ebd71b1d55f87f6e6098db36df7906e2efb",
   "matches": true
 }

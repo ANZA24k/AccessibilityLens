@@ -1,0 +1,17 @@
+{
+  "contract": "AccessibilityLens",
+  "version": "1.1",
+  "network": "studionet",
+  "chain_id": 61999,
+  "address": "0xa23E85B5F3c0141748e8957Cd5FaA2A6d17FF573",
+  "explorer": "https://explorer-studio.genlayer.com/contracts/0xa23E85B5F3c0141748e8957Cd5FaA2A6d17FF573",
+  "deployment_transaction": "0x9354821ec5604623863e90ad9dd5fb4bb1d45f255c0c91326b251c652a67c423",
+  "source_sha256": "8623d7800307e8f8714b2e97747e7ebd71b1d55f87f6e6098db36df7906e2efb",
+  "abi": "docs/abi.json",
+  "fixture_source_commit": "87eded275881ab691c59f4f9e5b27456c27bed83",
+  "demo_policy_id": "6236c61c7b55754d09e06b9c15ffa5a898603ac50a92b938f3a89962e83477a8",
+  "demo_audit_id": "69c4ea127d7d6f3a8b522b137bed11e1497dd179e6942be15b31d26206bb8eef",
+  "demo_receipt_hash": "fe31631fced01b62f5f368072cf4c42e7291546bbef7a78b5458dc4c0e122fcb",
+  "demo_outcome": "CONFORMANT",
+  "leader_only": false
+}
